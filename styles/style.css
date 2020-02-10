@@ -1,0 +1,163 @@
+@font-face {
+	font-family: 'MuseoSans', sans-serif;
+	src: url('../fonts/MuseoSansCyrl-500.eot'),
+		 url('../fonts/MuseoSansCyrl-500.woff'),
+		 url('../fonts/MuseoSansCyrl-500.ttf'),
+		 url('../fonts/MuseoSansCyrl-900.eot'),
+		 url('../fonts/MuseoSansCyrl-900.ttf'),
+		 url('../fonts/MuseoSansCyrl-900.woff');
+}
+@font-face {
+	font-family: 'Roboto', sans-serif;
+	src: url('../fonts/Roboto-Regular.ttf'),
+		 url('../fonts/Roboto-Medium.ttf'),
+		 url('../fonts/Roboto-Bold.ttf');
+}
+@font-face {
+	font-family: 'Lato', sans-serif;
+	src: url('../fonts/Lato-Regular.ttf');
+}
+
+html, body {
+	margin: 0;
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: inherit;
+}
+body *{
+	margin: 0;
+}
+header {
+	background: #fff;
+}
+.inner {
+	max-width: 920px;
+	padding: 0 10px;
+}
+header .inner {
+	margin: 0 auto 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-between;
+}
+.linkRow {
+	display: inline-block;
+	vertical-align: middle;
+}
+.linkRow a {
+	display: inline-block;
+	height: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-bottom: 2px solid #fff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 0.81rem;
+	color: #222222;
+	letter-spacing: 0.08em;
+	padding-top: 18px;
+	margin-left: 27px;
+}
+.linkRow a:hover {
+	border-bottom: 2px solid #f2958d;
+}
+.searchAndBuy {
+	display: inline-block;
+	margin-left: 50px;
+}
+.searchAndBuy a {
+	display: inline-block;
+	font-size: 0.81rem;
+	padding-top: 18px;
+	height: 32px;
+	width: 30px;
+	text-align: center;
+}
+.searchBtn {
+	margin-right: 20px;
+}
+.leftMenuBar {
+	display: none;
+	height: 50px;
+	width: 50px;
+	font-size: 1rem;
+}
+.inputForSearch {
+	visibility: hidden;
+    border: 1px solid;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    width: 0;
+    height: 1.5rem;
+    transition: 0.5s;
+}
+.-visibleContent {
+	visibility: visible;
+}
+.-hideContent {
+	display: none !important;
+}
+.inputWidth {
+	width: 200px;
+}
+.-readyToSearch {
+
+}
+
+
+@media all and (max-width: 700px) {
+	.leftMenuBar {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: center;
+		align-items: center;
+		justify-content: center;
+	}
+	nav {
+		display: none;
+		position: absolute;
+		right: 0;
+		top: 50px;
+		background: white;
+		height: calc(100vh - 50px);
+		padding-left: 10px;
+		overflow: hidden;
+	}
+	.linkRow,
+	.searchAndBuy {
+		display: block;
+		width: 200px;
+		margin: 0;
+	}
+	.linkRow a,
+	.searchAndBuy a{
+		display: block;
+		margin: 0;
+	}
+	.inputForSearch {
+		visibility: visible;
+		display: inline-block;
+		width: 150px;
+	}
+	a.searchBtn {
+		display: inline-block;
+	}
+
+	.-blockContent {
+		display: block;
+	}
+}
+
