@@ -23,10 +23,7 @@
 			}
 		}else {
 			console.log('456')
-		}
-
-		
-		
+		}	
 	})
 	$('.cancelSearch').on('click', function(){
 		$('.inputForSearch').removeClass('inputWidth').removeClass('-visibleContent');
