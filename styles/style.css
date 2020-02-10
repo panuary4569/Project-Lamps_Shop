@@ -30,7 +30,13 @@ a {
 body *{
 	margin: 0;
 }
+img{
+	width: 100%;
+	height: 100%;
+}
+
 header {
+	height: 50px;
 	background: #fff;
 }
 .inner {
@@ -116,6 +122,9 @@ header .inner {
 
 
 @media all and (max-width: 700px) {
+	html, body {
+		font-size: 12px;
+	}
 	.leftMenuBar {
 		display: -webkit-flex;
 		display: -moz-flex;
@@ -130,11 +139,12 @@ header .inner {
 		display: none;
 		position: absolute;
 		right: 0;
-		top: 50px;
+		top: 49px;
 		background: white;
 		height: calc(100vh - 50px);
 		padding-left: 10px;
 		overflow: hidden;
+		z-index: 1;
 	}
 	.linkRow,
 	.searchAndBuy {
@@ -159,5 +169,193 @@ header .inner {
 	.-blockContent {
 		display: block;
 	}
+	.slider .slide .inner {
+		-webkit-flex-direction: column-reverse;
+		-moz-flex-direction: column-reverse;
+		-ms-flex-direction: column-reverse;
+		-o-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+		justify-content: center;
+		-ms-align-items: center;
+		align-items: center;
+	}
+	.slideTwo p,
+	.slideThree p {
+		display: none;
+	}
+	.inner .colTwo {
+		width: 200px;
+	}
+	.slider .slideThree .inner{
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
 }
 
+
+/*SLIDER*/
+.slide{
+	height: 595px;
+}
+.slide .inner {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	margin: auto;
+	height: inherit;
+}
+.colOne {
+	max-width: 500px;
+}
+.colTwo {
+	max-width: 400px;
+}
+.slideOne {
+	background: url('../image/slideBack.jpg') center/cover;
+}
+.slideTwo {
+	background: linear-gradient(145deg, rgba(64,131,140,1) 0%, rgba(151,208,237,1) 100%);
+}
+.slideThree {
+	background: linear-gradient(90deg, rgba(151,208,237,1) 0%, rgba(122,206,168,1) 100%)
+}
+.slide h1 {
+	font-size: 2.5rem;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.1em;
+	font-weight: 600;
+	text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
+}
+.slide h4 {
+	margin-top: 0.85rem;
+	font-size: 1.56rem;
+	color: #f2958d;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.1em;
+	font-weight: 600;
+	text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
+}
+.slide p {
+	margin-top: 1.87rem;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.56rem;
+	letter-spacing: 0.05em;
+	text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
+}
+.slide a {
+	display: inline-block;
+	margin-top: 2.5rem;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 0.85rem;
+	color: #fff;
+	background: #75bcc6;
+	width: 126px;
+	padding: 13px 0;
+	border-radius: 25px;
+	text-align: center;
+
+	transition: 0.5s;
+}
+.slide a:hover {
+	border-radius: 5px;
+	background: #ffa67e;
+}
+.slick-arrow {
+	font-size: 0;
+	position: absolute;
+	z-index: 1;
+	border: none;
+	background: none;
+	top: calc(50% - 45px);
+	outline: none;
+	cursor: pointer;
+}
+.slick-prev:before {
+	content: '';
+	display: inline-block;
+	height: 85px;
+	width: 25px;
+	background: url('../image/arrow-prev.png') center/cover;
+}
+.slick-prev {
+	left: calc( 50% - 575px);
+}
+.slick-next {
+	right: calc( 50% - 575px);
+}
+.slick-next:before {
+	content: '';
+	display: inline-block;
+	height: 85px;
+	width: 25px;
+	background: url('../image/arrow-next.png') center/cover;
+}
+.slick-dots {
+	display: inline-block;
+    height: 27px;
+    width: 100px;
+    list-style: none;
+    position: absolute;
+    bottom: 45px;
+    left: calc(50% - 30px);
+    padding: 0;
+    clear: both;
+}
+.slick-dots button {
+	display: inline-block;
+	float: left;
+	font-size: 0;
+	width: 25px;
+	border: 2px solid #fff0;
+	border-radius: 50%;
+	background: none;
+	padding: 3.5px 0;
+	margin-right: 5px;
+	transition: 0.3s;
+	vertical-align: middle;
+	outline: none;
+}
+.slick-dots button:before {
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #fff;
+}
+li.slick-active button {
+	width: 25px;
+	padding: 5.5px 0;
+	border: 2px solid #f2958d;
+	background-color: none;
+}
+li.slick-active button:before {
+	width: 10px;
+	height: 10px;
+	background-color: #f2958d;
+}
+
+@media all and (max-width: 1200px) {
+	html, body {
+		font-size: 14px;
+	}
+	.slick-prev {
+		left: 0;
+	}
+	.slick-next {
+		right: 0;
+	}
+}

@@ -24,7 +24,8 @@
 		}else {
 			console.log('456')
 		}	
-	})
+	});
+
 	$('.cancelSearch').on('click', function(){
 		$('.inputForSearch').removeClass('inputWidth').removeClass('-visibleContent');
 		$(this).addClass('-hideContent');
@@ -33,4 +34,22 @@
 		}, 500);
 		$('.searchBtn').removeClass('-readyToSearch');
 	});
+
+
+	$('.slider').slick({
+		infinite: true,
+		dots: true,
+		arrows: true,
+		speed: 500,
+		autoplay: true,
+		autoplaySpeed: 10000,
+		responsive: [
+		{
+			breakpoint: 1000,
+			settings: {
+				arrows: false
+			}
+		}
+		]
+	})
 })(jQuery);
