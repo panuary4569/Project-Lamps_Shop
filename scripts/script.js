@@ -56,9 +56,21 @@
 
 	var quanity = {
 		'Summer Dress': 0,
+		'Summer Dress Red' : 0,
+		'Summer Dress Blue' : 0,
+		'Summer Dress Green' : 0,
 		'Winter Dress': 0,
+		'Winter Dress Red': 0,
+		'Winter Dress Blue': 0,
+		'Winter Dress Green': 0,
 		'Spring Dress': 0,
-		'Autumn Dress': 0
+		'Spring Dress Red': 0,
+		'Spring Dress Blue': 0,
+		'Spring Dress Green': 0,
+		'Autumn Dress': 0,
+		'Autumn Dress Red': 0,
+		'Autumn Dress Blue': 0,
+		'Autumn Dress Green': 0
 	}
 	console.log(quanity['Summer Dress']);
 	$('.minusBtn').on('click', function(){
@@ -99,6 +111,27 @@
 			quanity['Autumn Dress'] = quanity['Autumn Dress'] + 1;
 			b.siblings('.quanityNum').text(quanity['Autumn Dress']); 
 		}
-	})
+	});
+	
+
+	// COLORBUTTONS
+
+	$('.colorBtn').on('click', function(){
+		var colorB = $(this);
+		function backImageColorChange (color) {
+			var bbb = colorB.closest('.colTwo').find('.productData').text();
+			// colorB.closest('.colTwo').find('.productData').text(bbb + color);
+			bbb = 'url("./image/' + bbb + color + '.png")';
+			colorB.closest('.productItem').children('.colOne').css({'background-image' : bbb});
+			console.log(bbb)
+		}
+		if(colorB.hasClass('-backGreen')){
+			backImageColorChange(' Green');
+		}else if(colorB.hasClass('-backBlue')){
+			backImageColorChange(' Blue')
+		}else if(colorB.hasClass('-backRed')){
+			backImageColorChange(' Red');
+		};
+	});
 
 })(jQuery);
