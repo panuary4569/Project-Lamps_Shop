@@ -61,7 +61,7 @@ header .inner {
 }
 .linkRow a {
 	display: inline-block;
-	height: 50px;
+	height: 49px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -91,6 +91,22 @@ header .inner {
 .searchBtn {
 	margin-right: 20px;
 }
+.cartBtn {
+	position: relative;
+}
+.cartCost {
+	position: absolute;
+    display: none;
+    top: 32px;
+    left: -1px;
+    min-width: 36px;
+    padding-top: 2px;
+    font-size: 0.7rem;
+    height: 13px;
+    color: #fd0606;
+    border: 2px solid;
+    border-radius: 20px;
+}
 .leftMenuBar {
 	display: none;
 	height: 50px;
@@ -112,6 +128,9 @@ header .inner {
 }
 .-hideContent {
 	display: none !important;
+}
+.-showContent {
+	display: block;
 }
 .inputWidth {
 	width: 200px;
@@ -331,15 +350,6 @@ li.slick-active button:before {
 .-backImg4 {
 	background-image: url('../image/Spring Dress.png');
 }
-/*.-backImg4Green {
-	background-image: url('../image/imageLampFour-green.png');
-}
-.-backImg4Red {
-	background-image: url('../image/imageLampFour-red.png');
-}
-.-backImg4Blue {
-	background-image: url('../image/imageLampFour-blue.png');
-}*/
 
 .productItem .colTwo {
 	display: inline-block;
@@ -397,6 +407,9 @@ li.slick-active button:before {
 .productData {
 	display: none;
 }
+.productColor {
+	display: none;
+}
 .colorChoose {
 	margin-top: 11px;
 }
@@ -408,6 +421,7 @@ li.slick-active button:before {
 	height: 12px;
 	cursor: pointer;
 	margin-right: 0.625rem;
+	outline: none;
 }
 .-backGreen {
 	background-color: #a9d45e;
@@ -435,7 +449,19 @@ li.slick-active button:before {
 	text-align: center;
 	color: #fff;
 	font-size: 0.93rem;
+	transition: 0.5s;
 	cursor: pointer;
+}
+.productItem .buyBtn:hover {
+	border-radius: 10px;
+	background-color: #f2958d;
+}
+.productItem .buyBtn:focus {
+	border-radius: 5px;
+	background-color: #fff;
+	color: #f2958d;
+	border: 2px solid #f2958d;
+	outline: none;
 }
 .productItem .zoomBlock {
 	display: none;
