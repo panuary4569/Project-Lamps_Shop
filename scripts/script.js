@@ -52,6 +52,26 @@
 		}
 		]
 	});
+	$('.disProdSlider1').slick({
+		infinite: true,
+		dots: true,
+		arrows: true,
+		spped: 500,
+		autoplay: true,
+		slidesToShow: 2,
+  		slidesToScroll: 2,
+		autoplaySpeed: 10000,
+		responsive: [
+		{
+			
+			breakpoint: 1070,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+		]
+	})
 
 
 	var quanityPrice = {
