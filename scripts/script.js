@@ -207,4 +207,11 @@
 		$('html, body').animate({scrollTop: 0}, 1500);
 	})
 
+	$('.collectForm input[name=button').on('click', function(){
+		var email = $(this).siblings('input[type=email]').text(),
+			xhr = new XMLHttpRequest();
+
+
+	})
+
 })(jQuery);

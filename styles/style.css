@@ -37,6 +37,7 @@ body *{
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 	color: inherit;
+	outline: none;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
@@ -63,6 +64,16 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 	border-radius: 16px;
 	text-align: center;
+	transition: 0.5s;
+}
+.-btnType:hover {
+	border-radius: 5px;
+	background-color: #f2958d;
+}
+.-btnType:focus {
+	border-radius: 3px;
+	color: #f2958d;
+	background: transparent;
 }
 
 header {
@@ -625,6 +636,7 @@ section.about {
 	float: left;
 }
 .infoItem {
+	display: block;
 	height: inherit;
 	position: relative;
 	-webkit-background-size: cover;
@@ -708,7 +720,6 @@ section.about {
 	margin-top: 10px;
 }
 .cardTeam p {
-	margin-top: 10px;
 	font-family: 'MuseoSans', sans-serif;
 	font-weight: 500;
 	color: #5b5b5b;
@@ -717,7 +728,7 @@ section.about {
 	letter-spacing: 0.035rem;
 	text-align: center;
 	width: 220px;
-	margin: auto;
+	margin: 10px auto;
 }
 
 /*PARTNERS*/
