@@ -447,7 +447,7 @@ li.slick-active button:before {
 .colorBtn {
 	display: block;
 	float: left;
-	width: 10px;
+	width: 15px;
 	border-radius: 50%;
 	border: none;
 	cursor: pointer;
