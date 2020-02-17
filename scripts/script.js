@@ -201,6 +201,10 @@
 			alert(a);
 			console.log(a);
 		}
+	});
+
+	$('.linkUp').on('click', function(){
+		$('html, body').animate({scrollTop: 0}, 1500);
 	})
 
 })(jQuery);
