@@ -207,11 +207,20 @@
 		$('html, body').animate({scrollTop: 0}, 1500);
 	})
 
-	$('.collectForm input[name=button').on('click', function(){
-		var email = $(this).siblings('input[type=email]').text(),
-			xhr = new XMLHttpRequest();
-
-
-	})
+	$(".collectForm").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+                    url: $(this).attr('action'),
+                    data: $(this).serialize(),
+                    method: $(this).attr('method'),
+                    dataType: 'html',
+                    success: function(data) {
+                        alert("Запрос доставлен. Вернулся ответ: "+data);
+                    },
+                    error: function(xhr,status) {
+                        alert("Ошибка: "+status);
+                    }
+                });
+    });
 
 })(jQuery);
