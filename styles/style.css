@@ -176,6 +176,19 @@ header .inner {
 
 }
 
+	.cartBlock {
+		display: none;
+		width: 300px;
+		height: auto;
+		padding: 20px 10px;
+		background-color: #fff;
+		position: absolute;
+		top: 50px;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
 
 
 
@@ -984,8 +997,16 @@ box-shadow: 0px -3px 10px 0px rgba(0,0,0,0.1);
 		background: white;
 		height: calc(100vh - 50px);
 		padding-left: 10px;
-		overflow: hidden;
 		z-index: 1;
+	}
+	.obstruction {
+		display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 50px);
+    top: 50px;
+    overflow: hidden;
+    background-color: #ffffffd6;
 	}
 	.linkRow,
 	.searchAndBuy {

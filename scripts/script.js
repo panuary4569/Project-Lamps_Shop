@@ -3,9 +3,13 @@
 		if( $('.leftMenuBar i').attr('class') === 'fas fa-times'){
 			$('nav').removeClass('-blockContent');
 			$('.leftMenuBar i').attr('class', 'fas fa-bars');
+			$('.obstruction').removeClass('-blockContent');
+			$('body').css({'overflow' : 'auto'});
 		}else{
 			$('nav').addClass('-blockContent');
 			$('.leftMenuBar i').attr('class', 'fas fa-times');
+			$('.obstruction').addClass('-blockContent');
+			$('body').css({'overflow' : 'hidden'});
 		}
 	});
 
@@ -13,7 +17,7 @@
 
 		if( $(window).width() > 700) {
 			if( $('.searchBtn').hasClass('-readyToSearch') ) {
-				console.log('123');
+				//...
 			}else {
 				$(this).addClass('-readyToSearch');
 				$('.linkRow').addClass('-hideContent');
@@ -22,7 +26,7 @@
 				$('.cancelSearch').removeClass('-hideContent');
 			}
 		}else {
-			console.log('456')
+			//...
 		}	
 	});
 
@@ -71,7 +75,10 @@
 			}
 		}
 		]
-	})
+	});
+	$('.productItem .buyBtn').on('click', function(){
+		$(this).html('<i class="fas fa-shopping-cart"></i> buy');
+	});
 
 
 	var quanityPrice = {
@@ -93,7 +100,7 @@
 		'Autumn Dress Green': [27, 0]
 	}
 	var productInCart = {
-		'#1' : [0],
+		
 	}
 	// for (key in quanityPrice){
 	// 	console.log(key, quanityPrice[key][0], quanityPrice[key][1]);
@@ -186,20 +193,19 @@
 			$('.cartCost').text(cartNum);
 		}, 200);
 		}
-		console.log(productInCart);
 	});
 
 
 	$('.cartBtn').on('click', function(){
-		var a;
+		var a = '';
 		if( $('.cartCost').text() == 0 ){
 			alert('No product (');
 		}else{
 			for(key in productInCart){
-				a = '\n' + a + (key, productInCart[key][0], productInCart[key][1])
+				a = a + productInCart[key][0] + ' ' + productInCart[key][1] + ' ' + productInCart[key][2] + '(quanity)' + '<br>';
+				$('.cartBlock').html(a);
 			}
-			alert(a);
-			console.log(a);
+			$('.cartBlock').show();
 		}
 	});
 
